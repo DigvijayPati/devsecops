@@ -1,5 +1,5 @@
 New-Item -Path 'report.xml' -ItemType File
-java -jar C:\ZAP_2.10.0_Crossplatform\ZAP_2.10.0\zap-2.10.0.jar -cmd -quickurl http://localhost:8090/phpvulnbank/ -quickprogress -quickout report.xml
+java -jar C:\tools\zap\zap-2.11.1.jar -cmd -quickurl http://demo.testfire.net -quickprogress -quickout report.xml
 
 $xml =[xml](Get-Content ".\report.xml")
 $alertitems=$xml.SelectNodes("/OWASPZAPReport/site/alerts/alertitem")
