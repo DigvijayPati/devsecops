@@ -1,0 +1,23 @@
+version: '3.7'
+services:
+  jenkins-master:
+    environment:
+      JAVA_OPTS: "-Xms1g -Xmx1g"
+    container_name: devsecops
+    image: digupats/devsecops
+    user: jenkins
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "5"
+        max-size: "500m"
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    restart: always
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+ 
+volumes:
+  jenkins-data:
