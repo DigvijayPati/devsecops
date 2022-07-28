@@ -1,8 +1,8 @@
-# Create docker image
-docker build -t digupats/security_scan_python -f Dockerfile .
+# Create docker image for Jenkins application
+docker build -t digupats/devsecops -f Dockerfile .
 
-# Push image to Dockerhub
-dokcer push digupats/security_scan_python:latest
+# Start container 
+docker-compose up -d
 
 ## Refer to :
 [Demo] (https://github.com/pawnu/PythonSecurityPipeline)
