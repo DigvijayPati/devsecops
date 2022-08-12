@@ -1,2 +1,2 @@
-## Source code Analysis 
-# Tool : Fortify souce code analyzer 
+## Static code Analysis 
+# Tool : Fortify Static Code Analyzer
